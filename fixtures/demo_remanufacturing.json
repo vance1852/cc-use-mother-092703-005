@@ -1,0 +1,20 @@
+{
+  "rule_set_id": "transformer-reuse",
+  "title": "退役变压器部件再制造准入规则",
+  "rules": {
+    "iron_core": {
+      "allowed_product_models": ["TR-1600", "TR-2000"],
+      "scrap_dispositions": ["material_recovery"]
+    },
+    "copper_winding": {
+      "allowed_product_models": ["TR-2000"],
+      "scrap_dispositions": ["material_recovery", "hazardous_disposal"]
+    }
+  },
+  "process_spec": {
+    "process_code": "core-recondition",
+    "title": "铁芯再制造修复工艺",
+    "steps": ["表面清理", "阶梯铁芯复位", "去应力退火", "绝缘涂覆"],
+    "requirements": {"anneal_temp_c": 380, "coating": "epoxy-2"}
+  }
+}
